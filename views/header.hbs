@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="#" />
+    <title>Gunpla</title>
+</head>
+<body>
+    <header style="background-color:#111">
+        <a href="/" class="logo"><img src="../images/logo.png"><p>Gundam World.</p></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="nav">
+            <li><a href="/">Products</a></li>
+            <li><a href="/category">Categories</a></li>
+        </ul>
+    </header>
+    <script type="text/javascript">
+        function toggleMenu() {
+            const menuToggle = document.querySelector(".menuToggle");
+            const nav = document.querySelector(".nav")
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>

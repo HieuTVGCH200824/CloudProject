@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    {{>header}}
+<body>
+    <div class="productManager">
+    <table class ="displayTable" width="50%" border="0">    
+    <h1 class = "titleText">All Products</h1>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Picture</th>
+            <th>Action</th>
+        </tr>
+        {{#each products}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{catName}}</td>
+            <td>${{price}}</td>
+            <td><img src="{{pic}}" style="max-width:100px"/></td>
+            <td>
+                <a href="/edit?id={{_id}}">Edit</a>
+                <br>
+                <a href="/delete?id={{_id}}" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+</body>
+</html>

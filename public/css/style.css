@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  scroll-behavior: smooth;
+  font-weight: 500;
+  font-family: "Poppins", san-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.8s;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  display: flex;
+}
+
+header .logo p {
+  margin-top: 1em;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  filter: invert(100%);
+}
+
+header .nav {
+  position: relative;
+  display: flex;
+}
+header .nav li {
+  list-style: none;
+  margin-left: 30px;
+}
+header .nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+header .nav li a:hover {
+  color: #deb887;
+}
+
+.button {
+  font-size: 1.8em;
+  color: #fff;
+  background: #deb887;
+  display: inline-block;
+  padding: 20px 40px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+.button:hover {
+  color: brown;
+  letter-spacing: 5px;
+}
+
+.title {
+  font-size: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titleText {
+  font-size: 2em;
+  color: burlywood;
+  text-decoration: underline;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 10px 20px;
+  }
+  header .nav {
+    display: none;
+  }
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url("../images/menuIcon.png");
+    background-size: 45px;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    cursor: pointer;
+  }
+
+  .menuToggle.active {
+    position: relative;
+    background: url("../images/closeMenu.png");
+    width: 40px;
+    height: 40px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header .nav.active {
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    top: 113px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+  header .nav li {
+    margin-left: 0;
+  }
+  header .nav li a {
+    color: #111;
+    font-size: 1.6em;
+  }
+  section {
+    padding: 20px;
+  }
+}
+
+.productManager {
+  margin: 150px auto 0 auto;
+  width: 80%;
+}
+
+.categoryBody {
+  display: flex;
+  flex-direction: row;
+}
+
+.addForm {
+  border-radius: 30px;
+  background: linear-gradient(to right, #b4801e, #e4d2af);
+  width: 30%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.addForm .btn {
+  font-size: 1em;
+  color: #111;
+  background: rgb(228, 200, 157);
+  padding: 5px 10px;
+  margin: 10px 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.8s;
+}
+
+.displayTable {
+  width: 100%;
+}
+
+.displayTable th {
+  background-color: #deb887;
+}
+.displayTable td {
+  text-align: center;
+}
+.displayTable tr td a {
+  text-decoration: none;
+  color: #111;
+}
+.displayTable tr td a:hover {
+  background-color: #deb887;
+}

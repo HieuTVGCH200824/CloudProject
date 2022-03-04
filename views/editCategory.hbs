@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit category</title>
+</head>
+<body style="margin-top:200px">
+    {{>header}}
+    <h1 class = "titleText">Edit Category<h1>
+    <div class="addForm">
+    <img src="{{category.pic}}" style="max-width:100px"/>
+     <form action="/editCategory" method="post">
+       <input type="hidden" name="txtId" value="{{category._id}}">
+        Name <input type="text" name="txtName" value="{{category.name}}">
+        <br>
+        PictureURL <input type="text" name="txtPictureURL" value="{{category.pic}}">
+        <br>
+        <input type="submit" value="Update">
+    </form>
+    </div>
+</body>
+</html>

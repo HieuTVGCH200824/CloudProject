@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    {{>header}}
+<body class="categoryBody">
+    <div class="productManager">
+    <table class ="displayTable" width="50%" border="0">
+    <h1 class = "titleText">All Categories</h1>
+        <tr>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Action</th>
+        </tr>
+        {{#each category}}
+        <tr>
+            <td>{{name}}</td>
+            <td><img src="{{pic}}" style="max-width:100px"/></td>
+            <td>
+                <a href="/addProduct?id={{_id}}">Add new product</a>
+                <br>
+                <a href="/editCategory?id={{_id}}">Edit</a>
+                <br>
+                <a href="/deleteCategory?id={{_id}}" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+    <div class ="addForm" style="margin-top:200px">
+         <form action="/category" method="post">
+        Name <input type="text" name="txtName"> 
+        <br>
+        PictureURL <input type="text" name="txtPictureURL">
+        <br>
+        <input class="btn" type="submit" value="Insert">
+        </form>
+        <p>{{errorName}} </p>
+    <br>
+    </div>
+</body>
+</html>
