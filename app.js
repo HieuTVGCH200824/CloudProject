@@ -14,16 +14,10 @@ app.use(express.urlencoded({extended:true}))
 
 app.get('/',async(req,res)=>{
     
-    const id  = req.body.txtId
-
     const productCollection = 'product'
     const allProduct = await getAllFromCollection(productCollection)
-    const document = await getDocumentById(productCollection,id)
 
-    const categoryCollection = 'category'
-    const allCategory = await getAllFromCollection(categoryCollection)
-
-    res.render('index',{category:document, products:allProduct, categories:allCategory})
+    res.render('index',{products:allProduct})
 })
 
 
@@ -31,7 +25,7 @@ app.get('/addProduct', async(req,res)=>{
     const id = req.query.id
 
     const allProduct = await findProductById(id)
-    
+
     const categoryCollection = 'category'
     const document = await getDocumentById(categoryCollection,id)
     res.render('addProduct',{category:document,products:allProduct})

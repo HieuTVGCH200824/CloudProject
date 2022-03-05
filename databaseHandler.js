@@ -11,7 +11,6 @@ async function deleteDocumentById(collectionName,id){
     await dbo.collection(collectionName).deleteOne({_id: ObjectId(id)})
 }
 
-//myquery: dieu kien update(id=...); newvalues: gia tri moi can update
 async function updateCollection(collectionName, myquery, newvalues) {
     let client = await MongoClient.connect(url)
     let dbo = client.db(databaseName) //GCH0904_DB: ten database
