@@ -40,6 +40,7 @@ app.post('/addProduct',async (req,res)=>{
         res.redirect('/')
         return
     }
+    
     const price = req.body.txtPrice
     const picURL = req.body.txtPictureURL
     const newP = {
@@ -137,3 +138,38 @@ app.post('/editCategory', async (req,res)=>{
 const PORT = process.env.PORT || 5000
 app.listen(PORT)
 console.log('Server is running!')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if((name.indexOf('@')>0) || (name.indexOf('.')>0)){
+//     const errorName = "Name can NOT have special characters!!!"
+//     res.render('register',{'name': name, 'errorName':errorName})
+//     return
+// }
