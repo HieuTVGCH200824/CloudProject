@@ -2,7 +2,7 @@
 const express = require('express')
 const async = require('hbs/lib/async')
 const { ObjectId } = require('mongodb')
-const { insertObject, getAllFromCollection, getDocumentById, updateCollection, deleteDocumentById, findProductById } = require('./databaseHandler')
+const { insertObject, getAllFromCollection, getDocumentById, updateCollection, deleteDocumentById, findProductById, findProductByName } = require('./databaseHandler')
 const app = express()
 const hbs = require('hbs')
 const alert = require('alert')
